@@ -1,0 +1,33 @@
+﻿<Window x:Class="lrcFix.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lrcFix"
+        mc:Ignorable="d"
+        Title="lrcFix" Height="372" Width="574">
+    <Grid>
+        <TextBox x:Name="PathTextBox" HorizontalAlignment="Left" Margin="51,87,0,0" Text="Drag and drop lrc file here" TextWrapping="Wrap" VerticalAlignment="Top" Width="486" Height="67"/>
+        <StackPanel x:Name="mainHorizon" Margin="50,180,50,72" Orientation="Horizontal">
+            <GroupBox x:Name="OffsetTimeGroup" Header="Offset time" Margin="0,0,0,0" Height="95" Width="120">
+                <StackPanel x:Name="sp" Height="75">
+                    <Button x:Name="StopwatchButton" Content="Stopwatch" Margin="0,10,0,0" Height="22" Width="70" Click="StopwatchButton_Click"/>
+                    <StackPanel x:Name="timeStack" Orientation="Horizontal" Margin="0,10,0,0" Width="101">
+                        <TextBox x:Name="OffsetMinTextBox" TextAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Text="00" TextWrapping="Wrap" Width="20" Height="17"/>
+                        <Label Content=":" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBox x:Name="OffsetSecTextBox" TextAlignment="Center" HorizontalAlignment="Left"  Text="00" TextWrapping="Wrap" Width="20" Height="17"/>
+                        <Label Content="." HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBox x:Name="OffsetMilliSecTextBox" TextAlignment="Center"  Text="00" TextWrapping="Wrap" Width="20" Height="17"/>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox x:Name="OffsetTypeGroup" Header="Offset type" Margin="30,0,0,0" Height="78">
+                <StackPanel Height="35">
+                    <RadioButton x:Name="FasterRadio" Content="Faster" IsChecked="True"/>
+                    <RadioButton x:Name="LaterRadio" Content="Later" />
+                </StackPanel>
+            </GroupBox>
+            <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="70,30,0,0" VerticalAlignment="Top" Height="35" Width="117" FontSize="16" Click="StartButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
